@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 class="mt-5 mb-3 text-center">Sản phẩm yêu thích </h2>
+
+  <div class="row justify-content-evenly ">
+    <div *ngFor="let product of products" class="col-md-3 mb-3 ">
+      <div class="card" style="width: 100%;">
+      <a  href="detai-product/{{product.id}}"><img src="{{product.thumbnail}}" class="card-img-top" alt="..."></a> 
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="products-detail/:id">{{product.title}}</a>
+          </h5>
+          <i class="fa-solid fa-money-check-dollar text-success me-2"></i>
+          <span class="text-decoration-underline text-info ">{{product.price}} dollars</span>
+          <p class="card-text">{{product.description}}</p>
+          <a href="#" class="btn btn-success btn-sm" >Chi tiết</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
